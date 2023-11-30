@@ -9,7 +9,7 @@ For each design, there are a few different files:
 - The `*_plain.svg` files are perhaps useful for active development in other programs than inkscape.  Probably not useful for much of anything.
 
 ## Versioning
-This repo uses semantic versioning
+This repo uses semantic versioning.
 A commit with a tag (1.0.0) means that this is a version ready for use, and all three files mentioned above match each other and correspond to the same design.
 Do not push a tagged release unless your commit includes a `plain` and `optimized` file that you JUST exported.
 
