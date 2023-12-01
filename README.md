@@ -10,12 +10,25 @@ For each design, there are a few different files:
 - The `*.png` files are PNG exports that are 96 DPI or 500x500px.  These can be used for whatever.
 
 ## Versioning
-This repo uses semantic versioning.
-A commit with a tag (1.0.0) means that this is a version ready for use, and all three files mentioned above match each other and correspond to the same design.
+A commit with a tag (v1.0.0) means that this is a version ready for use, and all three files mentioned above match each other and correspond to the same design.
 Do not push a tagged release unless your commit includes a `plain` and `optimized` file that you JUST exported.
 
+This repo uses semantic versioning.
+
+In this case, the first number is the major revision number and indicates which design version this is a release for.
+The second number indicates a minor revision of a particular design.  This should be incremented for small tweaks.
+The third number is the bug fix number.  This should be changed if a previous release has a small problem that needs to be fixed in the design or file.
+This is something that should have been in the previous release but wasn't by mistake.
+
+Here is an example of a possible series of releases in chronological order:
+- v1.10.0
+- v1.10.1
+- v2.0.0
+- v1.11.0
+- v2.1.0
+
 ## Releasing
-When you are ready to tag a release and export the `plain` and `simplified` files, please follow these steps:
+When your design is finished and ready to use, please follow these steps:
 
 1. `Save As` a copy of the inkscape file and make sure it is open (Don't commit this file)
 2. Delete all unused layers in the file
@@ -32,4 +45,7 @@ When you are ready to tag a release and export the `plain` and `simplified` file
 13. Set the filename as the project name without a suffix and select PNG as the file type, and click `Export`
 14. Add both those files and commit them along with your new inkscape SVG file.  (These can also be added in their own commit, provided they match the inkscape file)
 15. Tag this release by running `git tag <release name>`
-16. Push the commit!
+16. Push the commit.  Make sure to also push the tags with `git push --tags` afterward
+17. In GitHub, go to `Releases` and add a new release with notes about what changed and credits for who changed it, choosing the tag you just pushed
+18. Include the same plain SVG, optimized SVG, and PNG files generated in the above steps
+
