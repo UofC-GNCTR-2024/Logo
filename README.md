@@ -11,7 +11,7 @@ For each design, there are a few different files:
 
 ## Versioning
 A commit with a tag (v1.0.0) means that this is a version ready for use, and all three files mentioned above match each other and correspond to the same design.
-Do not push a tagged release unless your commit includes a `plain` and `optimized` file that you JUST exported.
+Do not tag a release unless your commit includes a PNG and a `plain` and `optimized` file that you JUST exported.
 
 This repo uses semantic versioning.
 
@@ -44,8 +44,8 @@ When your design is finished and ready to use, please follow these steps:
 12. Enter `96` into the DPI field
 13. Set the filename as the project name without a suffix and select PNG as the file type, and click `Export`
 14. Add both those files and commit them along with your new inkscape SVG file.  (These can also be added in their own commit, provided they match the inkscape file)
-15. Tag this release by running `git tag <release name>`
-16. Push the commit.  Make sure to also push the tags with `git push --tags` afterward
-17. In GitHub, go to `Releases` and add a new release with notes about what changed and credits for who changed it, choosing the tag you just pushed
-18. Include the same plain SVG, optimized SVG, and PNG files generated in the above steps
+15. Push the commit
+16. In GitHub, go to `Releases` and add a new release with notes about what changed and credits for who changed it
+17. Include the same plain SVG, optimized SVG, and PNG files generated in the above steps
+18. Set `Previous tag` to the last release with this major version and uncheck `Set as the latest release`
 
