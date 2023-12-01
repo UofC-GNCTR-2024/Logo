@@ -7,6 +7,7 @@ For each design, there are a few different files:
 - The `*_inkscape.svg` files are inkscape SVG files.  These are the ones that should be actively worked on (if using inkscape)
 - The `*_optimized.svg` files are the ones that should be used for most purposes (web, printing, embroidery, etc.)
 - The `*_plain.svg` files are perhaps useful for active development in other programs than inkscape.  Probably not useful for much of anything.
+- The `*.png` files are PNG exports that are 96 DPI or 500x500px.  These can be used for whatever.
 
 ## Versioning
 This repo uses semantic versioning.
@@ -25,7 +26,10 @@ When you are ready to tag a release and export the `plain` and `simplified` file
 7. Select `plain SVG`, and save it with the suffix `_plain.svg`
 8. Repeat step 6, then select `Optimized SVG` and save it with the suffix `_optimized.svg`
 9. Accept the default options
-10. Add both those files and commit them along with your new inkscape SVG file.  (These can also be added in their own commit, provided they match the inkscape file)
-11. Tag this release by running `git tag <release name>`
-12. Push the commit!
-
+10. Go to `File` > `Export`
+11. On the right pane, select `Page`
+12. Enter `96` into the DPI field
+13. Set the filename as the project name without a suffix and select PNG as the file type, and click `Export`
+14. Add both those files and commit them along with your new inkscape SVG file.  (These can also be added in their own commit, provided they match the inkscape file)
+15. Tag this release by running `git tag <release name>`
+16. Push the commit!
